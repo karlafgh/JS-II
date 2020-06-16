@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Desafio 2 de Js 2</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<h1 style="text-align: center;">Generacion de Factura</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="jumbotron">
+					<form name="Datos" action="" method="get" onsubmit="return preguntar(this)">
+						Ingrese su Rif: <input type="text" name="rif" class="form-control" placeholder="Ej: J-121313-0">
+						<br>
+						<br>
+						Ingrese su Nombre: <input type="text" name="nombre" class="form-control" placeholder="Ej: Obduber Martinez">
+
+						<br>
+						<br>
+						Ingresa tu Direccion: <input type="text" name="direccion" class="form-control" placeholder="Ej: Av.Lara">
+
+						<br>
+						<br>
+						<input type="button" name="boton" id="boton" value="Enviar" class="btn btn-success btn-block">
+					</form>	
+				</div>
+			</div>
+<div class="col-md-6">
+	<div class="jumbotron">
+	<form  name="Articulos" action="" method="get" onsubmit="return articulo(this)" style="text-align: left;">
+        Nombre del Articulo: <input type="txt" name="nombre_articulo" class="form-control" placeholder="Ej: Jabon">
+        <br><br>
+        Ingresa la Cantidad: <input type="number" name="cantidad" class="form-control" placeholder="Ej: 2">
+        <br><br>
+        Ingresa el Precio: <input type="number" name="precio" class="form-control"
+        placeholder="Ej: 2000Bs.">
+        <br><br>
+		<input type="button" name="boton" id="arti" value="Enviar" class="btn btn-success btn-block">
+	</form>
+	</div>
+</div>
+
+<div class="container">
+	<div class="panel panel-default">
+		<div class="panel-heading"><h4>Cliente:</h4></div>
+		<div class="panel-body">
+			<article id="r" class="col-md-4"></article>
+			<article id="e" class="col-md-4"></article>
+			<article id="2" class="col-md-4"></article>
+		</div>
+	</div>		
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="panel-body">
+			<div class="row">
+				<article id="ar" class="col-md-3">
+					<input type="button" name="borrar" value="Borrar" id="borrar" class="btn btn-danger btn-xs" onsubmit="return borrar(this)" class="col-md-3"></article>
+					<article id="ti" class="col-md-3"></article>
+					<article id="cu" class="col-md-3"></article>
+				</div>
+				<div>
+					<article id="lo" class="col-md-3"></article>
+					<article id="s" class="col-md-3"></article>
+					<article id="to" class="col-md-3"></article>
+					<article id="tal" class="col-md-3"></article>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<input type="button" name="finalizar" id="finalizar" value="Finalizar Factura" class="btn btn-success" onsubmit="return finalizar(this)">
+
+    </div>
+	</div>
+<script src="js/Ejercicio.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
