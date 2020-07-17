@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío #3</title>
+</head>
+<body>
+    <h1>Registrarse</h1>
+    <form action="" method="get">
+        <label for="name">Nombre</label>
+        <input type="text" name="nombre" id="name">
+        <label for="id">Cédula</label>
+        <input type="text" name="id" id="cedula">
+        <label for="">Fecha de nacimiento</label>
+        <select name="dia" id="day">
+            <option value="0" >--seleccione</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>       
+        </select>
+        <select name="mes" id="month">
+            <option value="0" >--seleccione</option>
+            <option value="1">Enero</option>
+            <option value="2">Febrero</option>
+            <option value="3">Marzo</option>
+            <option value="4">Abril</option>
+            <option value="5">Mayo</option>    
+        </select>
+        <select name="año" id="year">
+            <option value="0" >--seleccione</option>
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>    
+        </select>
+        <label for="genero">Género</label>
+        <select name="genero" id="genre">
+            <option value="0">--seleccione</option>
+            <option value="Femenino">Femenino</option>
+            <option value="Masculino">Masculino</option>
+        </select>
+        <br>
+        <label for="correo">Email</label> 
+        <input type="text" name="correo" id="correo">
+        <label for="contraseña">Contraseña</label>
+        <input type="password" name="contraseña" id="contraseña">
+        <input type="checkbox" name="terminos" id="terminosE">
+        <label for="terminos">Acepto los términos y condiciones establecidos por la empresa</label>
+        <input type="button" value="Enviar" onclick="validarFormulario(this.form)">
+        <input type="reset" value="resetear">
+        <input type="button" value="ver tabla" onclick="tablaDinamica();">
+    </form>
+    <script src="js/file_d3.js"></script>
+</body>
+</html>

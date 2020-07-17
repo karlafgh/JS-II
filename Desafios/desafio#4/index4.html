@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío #4 JS</title>
+
+    <style>
+        p{
+            color:red;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario #4</h1>
+    <form id="formulario" action="" method="get">
+        <label for="name">Nombre</label>
+        <input type="text" name="nombre" id="name" onkeypress="return teclas_letras(event)">
+        <label for="id">Cédula</label>
+        <input type="text" name="ci" id="cedula" onblur="validarCedula(this.value, this.form)">
+        <label for="nro">Número de teléfono</label>
+        <input type="text" name="nro" id="nro_tlfno" onkeypress="return teclas_numeros(event)">
+        <label for="correo">Email</label> 
+        <input type="text" name="correo" id="correo" onblur="validarCorreo(this.value, this.form)">
+        <select name="estado" id="estados" onblur="selectCiudades(this.value)">
+            <option value="0">--seleccione</option>
+            <option value="Lara">Lara</option>
+            <option value="Yaracuy">Yaracuy</option>
+            <option value="Portuguesa">Portuguesa</option>
+        </select>
+        <select name="ciudades" id="ciudades">
+            <option id="opt1" value=""></option>
+            <option id="opt2" value=""></option>0
+            <option id="opt3" value=""></option>
+            <option id="opt4" value=""></option>
+        </select>
+        <input type="button" value="Generar" onclick="validarFormulario(this.form)">
+        <p id="reminder">La c.i debe seguir el siguiente formato: V-1234567.</p>
+        <p id="reminder2">Direccion de correo electronico no valida.</p>
+
+    </form>
+    <script type="text/javascript" src="js/file4.js"></script>
+</body>
+</html>
